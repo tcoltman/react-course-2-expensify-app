@@ -10,16 +10,6 @@ import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 
 const store = configureStore();
-store.dispatch(addExpense({description:'Waterbill',amount:4500,createdAt:11}));
-store.dispatch(addExpense({description:'Gasbill',amount:1000,createdAt:1000}));
-store.dispatch(addExpense({description:'Rent',amount:150000,createdAt:11}));
-
-store.dispatch(setTextFilter('water'));
-
-
-const state = store.getState();
-const VisibleExpenses = getVisibleExpenses(state.expenses,state.filters);
-console.log(VisibleExpenses);
 
 const jsx = (
     <Provider store={store}>
