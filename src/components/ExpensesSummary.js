@@ -18,7 +18,7 @@ return (
 };
 
 const MapStateToProps = (state)=>{   //the state is passed in
-    console.log(state.filters);
+    //console.log(state.filters);
     const visibleExpenses = selectExpenses(state.expenses,state.filters);
     return {
         expenseCount: visibleExpenses.length,
