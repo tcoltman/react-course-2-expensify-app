@@ -5,6 +5,7 @@ import AppRouter, {history} from './routers/AppRouter';
 import configureStore from  './store/configureStore';
 import {startSetExpenses,startRemoveExpense} from './actions/expenses';
 import {LoginPage} from  './components/LoginPage';
+import {LoadingPage} from './components/LoadingPage'
 import { login, logout } from './actions/auth';
 import getVisibleExpenses from './selectors/expenses';
 import 'normalize.css/normalize.css';
@@ -29,7 +30,8 @@ const renderApp =() => { //only reneder app, so check if rendered
         hasRendered = true;
     }
 }
-//ReactDOM.render(<p>Loading...</p>,document.getElementById('app'));
+
+ReactDOM.render(<LoadingPage />,document.getElementById('app'));
 
 
 firebase.auth().onAuthStateChanged((user)=>{

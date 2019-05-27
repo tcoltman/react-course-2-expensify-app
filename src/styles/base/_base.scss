@@ -1,10 +1,15 @@
+* {
+    box-sizing: border-box; /*content-box is default, so for an import it would add border and padding to total*/
+}
 html {
     font-size: 62.5%; //rem base 10
 }
 
 body {
+    color: $dark-grey;
     font-family: Helvetica, Arial, sans-serif;
     font-size: $m-size;
+    line-height: 1.6;
 }
 
 button {

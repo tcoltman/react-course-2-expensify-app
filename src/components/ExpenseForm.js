@@ -62,12 +62,12 @@ class ExpenseForm extends React.Component {
 
     render(){
        return (
-           <div>
-           {this.state.error && this.state.error}
-            <form onSubmit={this.onSubmit}> {/*call function*/}
+            <form className="form" onSubmit={this.onSubmit}> {/*call function*/}
+            {this.state.error && <p className="form__error">{this.state.error} </p>}
             <input 
                 type="text"
                 placeholder="Description"
+                className="text-input"
                 autoFocus
                 value={this.state.description}   //get value from state
                 onChange={this.onDescriptionChange} //on change called a function
@@ -75,6 +75,7 @@ class ExpenseForm extends React.Component {
             <input  
                 type="text"
                 placeholder="Amount"
+                className="text-input"
                 value={this.state.amount}  //get value from state
                 onChange={this.onAmountChange} //on change called a function
             />
@@ -87,13 +88,15 @@ class ExpenseForm extends React.Component {
             isOutsideRange={() => false}
             />
             <textarea 
+                className="textarea "
                 placeholder="Add a note for your expense"
                 value={this.state.note} //get value from state
                 onChange={this.onNoteChange} //on change called a function
             />
-            <button>Add Expense</button>
+            <div>  {/* button in own div to not be affected by above css */}
+            <button className="button">Save Expense</button>
+            </div>
             </form>
-           </div>
        ) 
     }
 }

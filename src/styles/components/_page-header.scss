@@ -1,0 +1,17 @@
+.page-header{
+    background: $off-white;
+    padding: $l_size 0;  /*top/bottom increased only, content-container will set L/R*/
+    margin-bottom: $l_size; /* bottom margin only */
+}
+
+.page-header__actions {
+    margin-top: $m_size;  /* drop the button a bit from the h1 above*/
+}
+
+.page-header__title{
+    margin: 0; /* clear margin */
+    font-weight: 300; /* thin weight */
+    span {
+        font-weight: bold; /* only spans bold (700) */
+    }
+}

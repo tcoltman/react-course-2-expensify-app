@@ -1,0 +1,20 @@
+.button {
+    background: $blue; 
+    border: none; /* remove border */
+    color: white;
+    display: inline-block;
+    text-decoration: none; /* remove underline of link */
+    line-height: 1; /* text sits on 1 line, so no need for it to have extra line height */
+    font-weight: 300;
+    font-size: $font-size-large;
+    padding: $s-size; /*same size for all TB/LR */ 
+}
+
+.button--link {
+    background: none;
+    border: none;
+}
+
+.button__secondary {
+    background: #888;
+}
